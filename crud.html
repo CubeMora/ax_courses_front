@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Testimonials CRUD</title>
+    <style>
+      /* Basic styling */
+      body {
+        font-family: "Roboto", sans-serif;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        background-color: #fafafa;
+      }
+
+      form {
+        display: flex;
+        flex-direction: column;
+        background: white;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+        padding: 20px;
+        width: 80%;
+        margin-bottom: 20px;
+      }
+
+      form label {
+        margin-bottom: 10px;
+      }
+
+      form input[type="text"],
+      form input[type="hidden"],
+      form textarea {
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        margin-bottom: 20px;
+      }
+
+      form input[type="submit"] {
+        background: #3f51b5;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+
+      table {
+        background: white;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+        padding: 20px;
+        width: 80%;
+        margin-bottom: 20px;
+      }
+
+      th,
+      td {
+        padding: 10px;
+      }
+
+      .edit-button,
+      .delete-button {
+        border: none;
+        padding: 10px;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-right: 10px;
+      }
+
+      .edit-button {
+        background: #4caf50;
+        color: white;
+      }
+
+      .delete-button {
+        background: #f44336;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Testimonials</h1>
+
+    <form id="testimonial-form">
+      <input type="hidden" id="testimonial-id" />
+      <label for="name">Name:</label><br />
+      <input type="text" id="name" name="name" /><br />
+      <label for="imgUrl">Image URL:</label><br />
+      <input type="text" id="imgUrl" name="imgUrl" /><br />
+      <label for="description">Description:</label><br />
+      <textarea id="description" name="description"></textarea><br />
+      <label for="profession">Profession:</label><br />
+      <input type="text" id="profession" name="profession" /><br />
+      <input type="submit" value="Submit" />
+    </form>
+
+    <table id="testimonials-table">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Image URL</th>
+          <th>Description</th>
+          <th>Profession</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="/js/crud.js"></script>
+  </body>
+</html>
